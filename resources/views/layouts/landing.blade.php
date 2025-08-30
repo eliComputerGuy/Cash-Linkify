@@ -76,7 +76,7 @@
     
     <!-- Fonts and Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ asset('assets/css/landing.css') }}">
+    <link rel="stylesheet" href="{{ url('assets/css/landing.css') }}">
     
     @yield('extra_css')
 </head>
@@ -87,7 +87,7 @@
     
     @include('includes.landing-footer')
     
-    <script src="{{ asset('assets/js/landing.js') }}"></script>
+    <script src="{{ url('assets/js/landing.js') }}"></script>
     @yield('extra_js')
     
     <!-- Go to Top Button -->

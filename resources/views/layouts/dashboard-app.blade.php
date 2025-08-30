@@ -26,8 +26,8 @@
             }
         </style>
 
-        <script defer src="{{ asset('assets/js/app.js?1096aad991449c8654b2') }}"></script>
-        <link href="{{ asset('assets/css/app.css?1096aad991449c8654b2') }}" rel="stylesheet">
+        <script defer src="{{ url('assets/js/app.js?1096aad991449c8654b2') }}"></script>
+        <link href="{{ url('assets/css/app.css?1096aad991449c8654b2') }}" rel="stylesheet">
     </head>
 
     <body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-teal roundedui" data-theme="theme-teal" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">

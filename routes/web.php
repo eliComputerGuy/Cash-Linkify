@@ -72,3 +72,14 @@ Route::get('/test-approve/{paymentId}', function($paymentId) {
     $refService = app(\App\Services\ReferralCommissionService::class);
     return $controller->approve($request, $paymentId, $refService);
 });
+
+// Test route for assets
+Route::get('/test-assets', function() {
+    return response()->json([
+        'css_url' => asset('assets/css/landing.css'),
+        'js_url' => asset('assets/js/landing.js'),
+        'app_url' => config('app.url'),
+        'css_exists' => file_exists(public_path('assets/css/landing.css')),
+        'js_exists' => file_exists(public_path('assets/js/landing.js')),
+    ]);
+});

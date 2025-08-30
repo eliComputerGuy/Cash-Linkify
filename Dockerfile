@@ -48,7 +48,8 @@ RUN a2enmod rewrite
 # Set permissions
 RUN chown -R www-data:www-data /var/www/html \
     && chmod -R 755 /var/www/html/storage \
-    && chmod -R 755 /var/www/html/bootstrap/cache
+    && chmod -R 755 /var/www/html/bootstrap/cache \
+    && chmod -R 755 /var/www/html/public/assets
 
 # Create storage link
 RUN php artisan storage:link
@@ -57,4 +58,4 @@ RUN php artisan storage:link
 EXPOSE 80
 
 # Start Apache with Laravel setup
-CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"]
+CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan optimize && apache2-foreground"]
