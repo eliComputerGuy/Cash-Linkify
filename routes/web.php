@@ -49,6 +49,7 @@ Route::middleware(['auth', 'registration.complete', 'account.verified'])->group(
     
     Route::get('/referrals', [App\Http\Controllers\ReferralController::class, 'referrals'])->name('referrals');
     
+    
     // Investment Routes
     Route::get('/investment', [InvestmentController::class, 'index'])->name('investment.index');
     Route::get('/investment/packages', [InvestmentController::class, 'packages'])->name('investment.packages');
