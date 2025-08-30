@@ -25,7 +25,7 @@ return new class extends Migration
 
             $table->foreign('beneficiary_user_id')->references('id')->on('users')->cascadeOnDelete();
             $table->foreign('source_user_id')->references('id')->on('users')->cascadeOnDelete();
-            // Temporarily comment out the foreign key constraint until task_logs table exists
+            // Temporarily comment out the foreign key constraint until task_logs table exists.
             // $table->foreign('task_log_id')->references('id')->on('task_logs')->cascadeOnDelete();
         });
     }
