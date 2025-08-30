@@ -57,4 +57,4 @@ RUN php artisan storage:link
 EXPOSE 80
 
 # Start Apache with Laravel setup
-CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"]
+CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed && php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"]
