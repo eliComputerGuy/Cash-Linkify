@@ -43,7 +43,7 @@ Route::middleware(['auth', 'registration.complete', 'account.verified'])->group(
     Route::post('/settings', [App\Http\Controllers\ProfileController::class, 'update'])->name('settings.update');
     Route::get('/settings/change-password', [App\Http\Controllers\ProfileController::class, 'changePassword'])->name('password.change');
     Route::get('/settings/payment-update', [App\Http\Controllers\ProfileController::class, 'paymentUpdate'])->name('payment.update');
-    Route::post('/settings/payment-update', [App\Http\Controllers\ProfileController::class, 'updatePayment'])->name('payment.update');
+    Route::post('/settings/payment-update', [App\Http\Controllers\ProfileController::class, 'updatePayment'])->name('payment.update.submit');
     Route::post('/profile/update', [App\Http\Controllers\ProfileController::class, 'updateProfile'])->name('profile.update');
     Route::post('/profile/password', [App\Http\Controllers\ProfileController::class, 'updatePassword'])->name('profile.password.update');
     
