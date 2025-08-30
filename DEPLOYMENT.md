@@ -12,8 +12,8 @@
 
 Ensure these files are in your repository:
 - `render.yaml` - Render configuration
-- `Procfile` - Process definition
-- `public/.htaccess` - Apache configuration
+- `Dockerfile` - Docker configuration
+- `docker/apache.conf` - Apache configuration
 - `deploy.sh` - Deployment script
 
 ### 2. Create Render Account
@@ -28,9 +28,9 @@ Ensure these files are in your repository:
 2. **Connect your GitHub repository**
 3. **Configure the service**:
    - **Name**: `cash-linkify`
-   - **Environment**: `PHP`
-   - **Build Command**: `composer install --no-dev --optimize-autoloader`
-   - **Start Command**: `vendor/bin/heroku-php-apache2 public/`
+   - **Environment**: `Docker`
+   - **Build Command**: (Leave empty - Docker will handle this)
+   - **Start Command**: (Leave empty - Docker will handle this)
 
 ### 4. Set Environment Variables
 
