@@ -4,7 +4,7 @@
 
 1. **GitHub Repository**: Ensure your project is pushed to GitHub
 2. **Render Account**: Sign up at [render.com](https://render.com)
-3. **Database**: Set up a MySQL database (you can use Render's MySQL service)
+3. **Database**: Set up a PostgreSQL database (you can use Render's PostgreSQL service)
 
 ## Step-by-Step Deployment
 
@@ -41,9 +41,9 @@ APP_ENV=production
 APP_DEBUG=false
 APP_KEY=base64:your-generated-key
 APP_URL=https://your-app-name.onrender.com
-DB_CONNECTION=mysql
-DB_HOST=your-mysql-host
-DB_PORT=3306
+DB_CONNECTION=pgsql
+DB_HOST=your-postgresql-host
+DB_PORT=5432
 DB_DATABASE=your-database-name
 DB_USERNAME=your-username
 DB_PASSWORD=your-password
@@ -55,9 +55,9 @@ LOG_CHANNEL=stack
 
 ### 5. Set Up Database
 
-1. **Create MySQL Database**:
-   - Click "New +" → "MySQL"
-   - Choose your plan
+1. **Create PostgreSQL Database**:
+   - Click "New +" → "PostgreSQL"
+   - Choose your plan (Free tier available)
    - Note the connection details
 
 2. **Update Environment Variables** with your database details
@@ -84,7 +84,7 @@ After successful deployment:
 | `APP_DEBUG` | Debug mode | `false` |
 | `APP_KEY` | Application encryption key | `base64:...` |
 | `APP_URL` | Application URL | `https://app.onrender.com` |
-| `DB_HOST` | Database host | `your-mysql-host` |
+| `DB_HOST` | Database host | `your-postgresql-host` |
 | `DB_DATABASE` | Database name | `cash_linkify` |
 | `DB_USERNAME` | Database username | `user` |
 | `DB_PASSWORD` | Database password | `password` |

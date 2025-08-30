@@ -12,7 +12,7 @@ services:
       - key: APP_URL
         value: https://cash-linkify.onrender.com
       - key: DB_CONNECTION
-        value: mysql
+        value: pgsql
       - key: CACHE_DRIVER
         value: file
       - key: SESSION_DRIVER
