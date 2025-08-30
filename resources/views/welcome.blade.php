@@ -3,7 +3,7 @@
 @section('title', 'Cash Linkify – Your Partner in Growth and Opportunity')
 @section('description', 'Join Cash Linkify and start earning through daily video tasks and referrals. Build sustainable income with our legitimate platform. Register now and unlock your financial potential.')
 @section('keywords', 'Cash Linkify, earn money online, video tasks, referral program, passive income, Libya, financial opportunities, investment platform, daily earnings, legitimate earning platform')
-@section('og_image', asset('assets/img/logo-512.png'))
+@section('og_image', url('assets/img/logo-512.png'))
 
 @section('content')
     <!-- Hero Section -->
@@ -11,7 +11,7 @@
         <!-- Hero Slider -->
         <div class="hero-slider">
             <!-- Slide 1: Dashboard Overview -->
-            <div class="hero-slide active" style="background-image: url('{{ asset('assets/img/banner_1_dashboard.png') }}');">
+            <div class="hero-slide active" style="background-image: url('{{ url('assets/img/banner_1_dashboard.png') }}');">
                 <div class="hero-slide-content">
                     <h1>Your Partner in <span class="highlight">Growth</span> and <span class="highlight">Opportunity</span></h1>
                     <p>Join Cash Linkify and start earning daily through video tasks and referrals. Build your future with our innovative platform.</p>
@@ -27,7 +27,7 @@
             </div>
             
             <!-- Slide 2: Daily Earnings -->
-            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/banner_2_daily_earnings.png') }}');">
+            <div class="hero-slide" style="background-image: url('{{ url('assets/img/banner_2_daily_earnings.png') }}');">
                 <div class="hero-slide-content">
                     <h1>Earn <span class="highlight">Daily</span> Through <span class="highlight">Video Tasks</span></h1>
                     <p>Complete simple video tasks every day and watch your earnings grow. Our platform makes earning money accessible to everyone.</p>
@@ -43,7 +43,7 @@
             </div>
             
             <!-- Slide 3: Referral System -->
-            <div class="hero-slide" style="background-image: url('{{ asset('assets/img/banner_3_referrals.png') }}');">
+            <div class="hero-slide" style="background-image: url('{{ url('assets/img/banner_3_referrals.png') }}');">
                 <div class="hero-slide-content">
                     <h1>Build <span class="highlight">Passive Income</span> with <span class="highlight">Referrals</span></h1>
                     <p>Invite friends and family to join our platform. Earn up to 15% commission on their activities across 3 levels deep.</p>

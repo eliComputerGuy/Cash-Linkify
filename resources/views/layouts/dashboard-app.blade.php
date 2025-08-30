@@ -11,7 +11,7 @@
 
         <title>{{ config('app.name') }}</title>
         
-        <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+        <link rel="icon" type="image/png" href="{{url('assets/img/favicon.png')}}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -59,7 +59,7 @@
         @include('includes.dashboard-footer')
         
         <!-- Page Level js -->
-        <script src="{{asset('assets/js/investment/investment-dashboard.js')}}"></script>
+        <script src="{{url('assets/js/investment/investment-dashboard.js')}}"></script>
 
         <!-- Stack for page-specific scripts -->
         @stack('scripts')
@@ -88,7 +88,7 @@
                 toastList.forEach(toast => toast.show());
             });
         </script>
-        <script src="{{asset('assets/js/component/component-toasts.js')}}"></script>
+        <script src="{{url('assets/js/component/component-toasts.js')}}"></script>
 
         <div id="toastContainer"
             class="toast-container position-fixed top-0 end-0 p-3"
