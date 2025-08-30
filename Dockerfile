@@ -33,8 +33,8 @@ COPY --chown=www-data:www-data . /var/www/html
 # Change current user to www
 USER www-data
 
-# Install dependencies
-RUN composer install --no-dev --optimize-autoloader
+# Install dependencies (without post-install scripts that require .env)
+RUN composer install --no-dev --optimize-autoloader --no-scripts
 
 # Change back to root user
 USER root
@@ -56,5 +56,5 @@ RUN php artisan storage:link
 # Expose port 80
 EXPOSE 80
 
-# Start Apache
-CMD ["apache2-foreground"]
+# Start Apache with Laravel setup
+CMD ["sh", "-c", "php artisan config:cache && php artisan route:cache && php artisan view:cache && apache2-foreground"]
