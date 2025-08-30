@@ -13,10 +13,18 @@ class DatabaseSeeder extends Seeder
      */
     public function run(): void
     {
-        $this->call([
-            InvestmentProductSeeder::class,
-            LevelSeeder::class,
-        ]);
+        try {
+            $this->call([
+                InvestmentProductSeeder::class,
+                LevelSeeder::class,
+            ]);
+            
+            $this->command->info('Database seeding completed successfully.');
+        } catch (\Exception $e) {
+            $this->command->error('Database seeding failed: ' . $e->getMessage());
+            // Don't throw the exception to prevent deployment failure
+        }
+        
         // User::factory(10)->create();
 
         // User::factory()->create([

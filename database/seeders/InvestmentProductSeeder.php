@@ -13,6 +13,12 @@ class InvestmentProductSeeder extends Seeder
      */
     public function run(): void
     {
+        // Check if products already exist
+        if (InvestmentProduct::count() > 0) {
+            $this->command->info('Investment products already exist, skipping seeding.');
+            return;
+        }
+
         $packages = [
             [
                 'name' => 'Mc Queen',
@@ -44,7 +50,14 @@ class InvestmentProductSeeder extends Seeder
         ];
 
         foreach ($packages as $package) {
-            InvestmentProduct::create($package);
+            try {
+                InvestmentProduct::create($package);
+                $this->command->info("Created investment package: {$package['name']}");
+            } catch (\Exception $e) {
+                $this->command->warn("Failed to create package {$package['name']}: " . $e->getMessage());
+            }
         }
+
+        $this->command->info('Investment products seeding completed.');
     }
 }
