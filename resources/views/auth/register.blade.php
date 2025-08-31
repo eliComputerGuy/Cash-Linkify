@@ -13,7 +13,7 @@
                                 <h1 class="mb-3">Let's get started&#128077;</h1>
                                 <p class="text-secondary">Provide your few details</p>
                             </div>
-                            <form method="POST" action="{{ route('register') }}">
+                            <form method="POST" action="{{ secure_url('/register') }}">
                                 @csrf
                                 <div class="form-floating mb-3">
                                     <input id="name" type="text" class="form-control @error('name') is-invalid @enderror" placeholder="Enter first name" name="name" value="{{ old('name') }}" autocomplete="name" autofocus>

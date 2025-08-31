@@ -19,7 +19,7 @@
                         <h1 class="mb-2">Welcome&#9996;</h1>
                         <p class="text-secondary">Enter your credential to login</p>
                     </div>
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ secure_url('/login') }}">
                         @csrf
 
                         <div class="form-floating mb-3">
@@ -142,7 +142,7 @@
                 <div class="card-header">{{ __('Login') }}</div>
 
                 <div class="card-body">
-                    <form method="POST" action="{{ route('login') }}">
+                    <form method="POST" action="{{ secure_url('/login') }}">
                         @csrf
 
                         <div class="row mb-3">
