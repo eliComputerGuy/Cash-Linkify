@@ -3,7 +3,7 @@
 @section('title', 'FAQs - Cash Linkify')
 @section('description', 'Find answers to frequently asked questions about Cash Linkify, our services, investment packages, and how to get started with earning opportunities.')
 @section('keywords', 'FAQs, frequently asked questions, Cash Linkify help, support, questions and answers, how to earn, investment guide')
-@section('og_image', asset('assets/img/logo-512.png'))
+@section('og_image', secure_url('assets/img/logo-512.png'))
 
 @section('content')
     <!-- Hero Section -->

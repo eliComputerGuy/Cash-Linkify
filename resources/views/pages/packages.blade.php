@@ -3,7 +3,7 @@
 @section('title', 'Packages - Cash Linkify')
 @section('description', 'Explore our investment packages: Starter, Professional, and Premium. Choose the perfect plan to start your earning journey with Cash Linkify.')
 @section('keywords', 'investment packages, starter package, professional package, premium package, investment plans, earning plans, Cash Linkify packages')
-@section('og_image', asset('assets/img/logo-512.png'))
+@section('og_image', secure_url('assets/img/logo-512.png'))
 
 @section('content')
     <!-- Hero Section -->

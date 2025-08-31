@@ -3,7 +3,7 @@
 @section('title', 'About Us - Cash Linkify')
 @section('description', 'Learn about Cash Linkify, our mission, values, and commitment to providing legitimate earning opportunities through daily video tasks and referral programs.')
 @section('keywords', 'about Cash Linkify, company mission, values, team, history, legitimate platform, earning opportunities, Libya')
-@section('og_image', asset('assets/img/logo-512.png'))
+@section('og_image', secure_url('assets/img/logo-512.png'))
 
 @section('content')
     <!-- Hero Section -->

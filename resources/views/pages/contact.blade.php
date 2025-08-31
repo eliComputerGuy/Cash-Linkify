@@ -3,7 +3,7 @@
 @section('title', 'Contact Us - Cash Linkify')
 @section('description', 'Get in touch with Cash Linkify. Contact our support team for assistance with your account, investment questions, or general inquiries.')
 @section('keywords', 'contact Cash Linkify, support, customer service, help desk, contact information, get help, customer support')
-@section('og_image', asset('assets/img/logo-512.png'))
+@section('og_image', secure_url('assets/img/logo-512.png'))
 
 @section('content')
     <!-- Hero Section -->
