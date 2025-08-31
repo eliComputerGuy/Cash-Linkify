@@ -129,12 +129,12 @@
                                 <div class="swiper swipernavpagination pb-5">
                                     <div class="swiper-wrapper">
                                         <div class="swiper-slide">
-                                            <img src="{{asset('assets/img/investment/slide2.png')}}" alt="" class="mw-100 mb-3">
+                                            <img src="{{secure_url('assets/img/investment/slide2.png')}}" alt="" class="mw-100 mb-3">
                                             <h2 class="text-white mb-3">Earn Rewards by Completing Daily Tasks.</h2>
                                             <p class="lead opacity-75">Watch Videos each day and earn money for <br/> completing queick and easy tasks.</p>
                                         </div>
                                         <div class="swiper-slide">
-                                            <img src="{{asset('assets/img/investment/slide.png')}}" alt="" class="mw-100 mb-3">
+                                            <img src="{{secure_url('assets/img/investment/slide.png')}}" alt="" class="mw-100 mb-3">
                                             <h2 class="text-white mb-3">Grow Your Investments with Muiltiple Opportunities</h2>
                                             <p class="lead opacity-75">Choose from a variety of investment options <br/> to diversify your portfolio and maxinize returns.</p>
                                         </div>

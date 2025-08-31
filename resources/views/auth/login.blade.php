@@ -84,10 +84,10 @@
                     </div>
 
                     <button class="btn btn-lg btn-outline-theme w-100 mb-3 text-start">
-                        <img src="{{asset('assets/img/g-logo.png')}}" alt="" class="me-2"> Sign in with Google
+                        <img src="{{secure_url('assets/img/g-logo.png')}}" alt="" class="me-2"> Sign in with Google
                     </button>
                     <button class="btn btn-lg btn-outline-theme w-100 mb-4 text-start">
-                        <img src="{{asset('assets/img/f-logo.png')}}" alt="" class="me-2"> Sign in with Facebook
+                        <img src="{{secure_url('assets/img/f-logo.png')}}" alt="" class="me-2"> Sign in with Facebook
                     </button>
                     <br><br>
                 </div>
@@ -108,12 +108,12 @@
                                                 <div class="swiper-wrapper">
                                                     <!-- Slides -->
                                                     <div class="swiper-slide">
-                                                        <img src="{{asset('assets/img/investment/slide2.png')}}" alt="" class="mw-100 mb-3">
+                                                        <img src="{{secure_url('assets/img/investment/slide2.png')}}" alt="" class="mw-100 mb-3">
                                                         <h2 class="text-white mb-3">Earn Rewards by Completing Daily Tasks.</h2>
                                                         <p class="lead opacity-75">Watch Videos each day and earn money for <br/> completing queick and easy tasks.</p>
                                                     </div>
                                                     <div class="swiper-slide">
-                                                        <img src="{{asset('assets/img/investment/slide.png')}}" alt="" class="mw-100 mb-3">
+                                                        <img src="{{secure_url('assets/img/investment/slide.png')}}" alt="" class="mw-100 mb-3">
                                                         <h2 class="text-white mb-3">Grow Your Investments with Muiltiple Opportunities</h2>
                                                         <p class="lead opacity-75">Choose from a variety of investment options <br/> to diversify your portfolio and maxinize returns.</p>
                                                     </div>

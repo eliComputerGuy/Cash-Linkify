@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+            <link rel="icon" type="image/png" href="{{secure_url('assets/img/favicon.png')}}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -24,8 +24,8 @@
         }
     </style>
 
-    <script defer src="{{asset('assets/js/app435e.js?1096aad991449c8654b2')}}"></script>
-    <link href="{{asset('assets/css/app435e.css?1096aad991449c8654b2')}}" rel="stylesheet">
+            <script defer src="{{secure_url('assets/js/app435e.js?1096aad991449c8654b2')}}"></script>
+        <link href="{{secure_url('assets/css/app435e.css?1096aad991449c8654b2')}}" rel="stylesheet">
 </head>
 
 <body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-teal roundedui" data-theme="theme-teal" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
@@ -36,7 +36,7 @@
     </main>
 
 
-    <script src="{{asset('assets/js/investment/investment-auth.js')}}"></script>
+            <script src="{{secure_url('assets/js/investment/investment-auth.js')}}"></script>
 
     @foreach (['success', 'error', 'info'] as $msg)
             @if (session($msg))
@@ -61,6 +61,6 @@
                 toastList.forEach(toast => toast.show());
             });
         </script>
-        <script src="{{asset('assets/js/component/component-toasts.js')}}"></script>
+        <script src="{{secure_url('assets/js/component/component-toasts.js')}}"></script>
 </body>
 </html>

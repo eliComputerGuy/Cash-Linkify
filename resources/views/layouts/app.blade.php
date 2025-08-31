@@ -9,7 +9,7 @@
 
     <title>{{ config('app.name', 'Laravel') }}</title>
 
-    <link rel="icon" type="image/png" href="{{asset('assets/img/favicon.png')}}">
+            <link rel="icon" type="image/png" href="{{secure_url('assets/img/favicon.png')}}">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -24,8 +24,8 @@
         }
     </style>
 
-    <script defer src="{{asset('assets/js/app435e.js?1096aad991449c8654b2')}}"></script>
-    <link href="{{asset('assets/css/app435e.css?1096aad991449c8654b2') }}" rel="stylesheet">
+            <script defer src="{{secure_url('assets/js/app435e.js?1096aad991449c8654b2')}}"></script>
+        <link href="{{secure_url('assets/css/app435e.css?1096aad991449c8654b2') }}" rel="stylesheet">
 
     <!-- Fonts -->
     <link rel="dns-prefetch" href="//fonts.bunny.net">
@@ -96,6 +96,6 @@
     </div>
 
 
-    <script src="{{asset('assets/js/investment/investment-auth.js')}}"></script>
+            <script src="{{secure_url('assets/js/investment/investment-auth.js')}}"></script>
 </body>
 </html>

@@ -16,7 +16,7 @@
             </div>
             <div class="text-center collapse " id="usersidebarprofile">
                 <figure class="avatar avatar-100 rounded-circle coverimg my-3">
-                    <img src="{{ asset('assets/img/user.png') }}" alt="{{ Auth::user()->name }}">
+                    <img src="{{ secure_url('assets/img/user.png') }}" alt="{{ Auth::user()->name }}">
                 </figure>
                 <h5 class="mb-1 fw-medium">{{ Auth::user()->name }}</h5>
                 <p class="small">{{ Auth::user()->email }}</p>

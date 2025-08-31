@@ -11,8 +11,8 @@
 
             <!-- logo -->
             <a class="navbar-brand" href="{{ url('/') }}">
-                <img data-bs-img="light" src="{{asset('assets/img/logo-light.svg')}}" alt="">
-                <img data-bs-img="dark" src="{{asset('assets/img/logo-light.svg')}}" alt="">
+                <img data-bs-img="light" src="{{secure_url('assets/img/logo-light.svg')}}" alt="">
+<img data-bs-img="dark" src="{{secure_url('assets/img/logo-light.svg')}}" alt="">
                 <div class="">
                     <span class="h4">{{ config('app.name') }}</span>
                     <p class="company-tagline">Your Partner in Growth and Opportunity</p>
@@ -54,7 +54,7 @@
                         <div class="row gx-0 d-inline-flex">
                             <div class="col-auto align-self-center">
                                 <figure class="avatar avatar-28 rounded-circle coverimg align-middle">
-                                    <img src="{{ asset('assets/img/user.png') }}" alt="{{ Auth::user()->name }}" id="userphotoonboarding2">
+                                    <img src="{{ secure_url('assets/img/user.png') }}" alt="{{ Auth::user()->name }}" id="userphotoonboarding2">
                                 </figure>
                             </div>
                         </div>
@@ -64,7 +64,7 @@
                             <div class="row gx-0">
                                 <div class="col-auto px-3">
                                     <figure class="avatar avatar-50 rounded-circle coverimg align-middle">
-                                        <img src="{{ asset('assets/img/user.png') }}" alt="{{ Auth::user()->name }}">
+                                        <img src="{{ secure_url('assets/img/user.png') }}" alt="{{ Auth::user()->name }}">
                                     </figure>
                                 </div>
                                 <div class="col align-self-center ">
