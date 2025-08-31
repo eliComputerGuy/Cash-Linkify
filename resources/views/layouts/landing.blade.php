@@ -20,16 +20,16 @@
     <link rel="canonical" href="{{ url()->current() }}">
     
     <!-- Favicon -->
-    <link rel="icon" type="image/png" href="{{ url('assets/img/favicon.png') }}">
-    <link rel="apple-touch-icon" href="{{ url('assets/img/favicon.png') }}">
-    <link rel="shortcut icon" href="{{ url('assets/img/favicon.png') }}">
+    <link rel="icon" type="image/png" href="{{ secure_url('assets/img/favicon.png') }}">
+    <link rel="apple-touch-icon" href="{{ secure_url('assets/img/favicon.png') }}">
+    <link rel="shortcut icon" href="{{ secure_url('assets/img/favicon.png') }}">
     
     <!-- Open Graph / Facebook -->
     <meta property="og:type" content="website">
     <meta property="og:url" content="{{ url()->current() }}">
     <meta property="og:title" content="@yield('title', 'Cash Linkify – Your Partner in Growth and Opportunity')">
     <meta property="og:description" content="@yield('description', 'Join Cash Linkify and start earning through daily video tasks and referrals. Build sustainable income with our legitimate platform. Register now and unlock your financial potential.')">
-    <meta property="og:image" content="@yield('og_image', url('assets/img/logo-512.png'))">
+    <meta property="og:image" content="@yield('og_image', secure_url('assets/img/logo-512.png'))">
     <meta property="og:image:width" content="1200">
     <meta property="og:image:height" content="630">
     <meta property="og:site_name" content="Cash Linkify">
@@ -40,21 +40,21 @@
     <meta property="twitter:url" content="{{ url()->current() }}">
     <meta property="twitter:title" content="@yield('title', 'Cash Linkify – Your Partner in Growth and Opportunity')">
     <meta property="twitter:description" content="@yield('description', 'Join Cash Linkify and start earning through daily video tasks and referrals. Build sustainable income with our legitimate platform. Register now and unlock your financial potential.')">
-    <meta property="twitter:image" content="@yield('og_image', url('assets/img/logo-512.png'))">
+    <meta property="twitter:image" content="@yield('og_image', secure_url('assets/img/logo-512.png'))">
     <meta property="twitter:site" content="@cashlinkify">
     <meta property="twitter:creator" content="@cashlinkify">
     
     <!-- Additional SEO Meta Tags -->
     <meta name="theme-color" content="#0E5665">
     <meta name="msapplication-TileColor" content="#0E5665">
-    <meta name="msapplication-config" content="{{ url('browserconfig.xml') }}">
+    <meta name="msapplication-config" content="{{ secure_url('browserconfig.xml') }}">
     
     <!-- Schema.org Microdata -->
     <div itemscope itemtype="https://schema.org/Organization" style="display: none;">
         <span itemprop="name">Cash Linkify</span>
         <span itemprop="description">Cash Linkify is a leading platform that provides legitimate earning opportunities for people across Libya through daily video tasks and referral programs.</span>
         <span itemprop="url">{{ url('/') }}</span>
-        <img itemprop="logo" src="{{ url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo" style="display: none;">
+        <img itemprop="logo" src="{{ secure_url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo" style="display: none;">
         <div itemprop="address" itemscope itemtype="https://schema.org/PostalAddress">
             <span itemprop="addressCountry">Libya</span>
         </div>
@@ -76,7 +76,7 @@
     
     <!-- Fonts and Styles -->
     <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700;800&display=swap" rel="stylesheet">
-    <link rel="stylesheet" href="{{ url('assets/css/landing.css') }}">
+    <link rel="stylesheet" href="{{ secure_url('assets/css/landing.css') }}">
     
     @yield('extra_css')
 </head>
@@ -87,7 +87,7 @@
     
     @include('includes.landing-footer')
     
-    <script src="{{ url('assets/js/landing.js') }}"></script>
+    <script src="{{ secure_url('assets/js/landing.js') }}"></script>
     @yield('extra_js')
     
     <!-- Go to Top Button -->

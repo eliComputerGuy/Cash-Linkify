@@ -11,7 +11,7 @@
 
         <title>{{ config('app.name') }}</title>
         
-        <link rel="icon" type="image/png" href="{{url('assets/img/favicon.png')}}">
+        <link rel="icon" type="image/png" href="{{secure_url('assets/img/favicon.png')}}">
 
         <!-- Fonts -->
         <link rel="preconnect" href="https://fonts.googleapis.com/">
@@ -26,8 +26,8 @@
             }
         </style>
 
-        <script defer src="{{ url('assets/js/app.js?1096aad991449c8654b2') }}"></script>
-        <link href="{{ url('assets/css/app.css?1096aad991449c8654b2') }}" rel="stylesheet">
+        <script defer src="{{ secure_url('assets/js/app.js?1096aad991449c8654b2') }}"></script>
+        <link href="{{ secure_url('assets/css/app.css?1096aad991449c8654b2') }}" rel="stylesheet">
     </head>
 
     <body class="main-bg main-bg-opac main-bg-blur adminuiux-sidebar-fill-white adminuiux-sidebar-boxed  theme-teal roundedui" data-theme="theme-teal" data-sidebarfill="adminuiux-sidebar-fill-white" data-bs-spy="scroll" data-bs-target="#list-example" data-bs-smooth-scroll="true" tabindex="0">
@@ -59,7 +59,7 @@
         @include('includes.dashboard-footer')
         
         <!-- Page Level js -->
-        <script src="{{url('assets/js/investment/investment-dashboard.js')}}"></script>
+        <script src="{{secure_url('assets/js/investment/investment-dashboard.js')}}"></script>
 
         <!-- Stack for page-specific scripts -->
         @stack('scripts')
@@ -88,7 +88,7 @@
                 toastList.forEach(toast => toast.show());
             });
         </script>
-        <script src="{{url('assets/js/component/component-toasts.js')}}"></script>
+        <script src="{{secure_url('assets/js/component/component-toasts.js')}}"></script>
 
         <div id="toastContainer"
             class="toast-container position-fixed top-0 end-0 p-3"

@@ -4,7 +4,7 @@
         <div class="footer-grid">
             <div class="footer-section">
                 <div class="footer-logo">
-                    <img src="{{ url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo">
+                    <img src="{{ secure_url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo">
                     <span class="footer-logo-text">Cash Linkify</span>
                 </div>
                 <p>Your Partner in Growth and Opportunity. Join our platform to earn daily through video tasks and referrals.</p>

@@ -3,7 +3,7 @@
     <div class="container">
         <div class="nav-content">
             <a href="{{ route('index') }}" class="logo">
-                <img src="{{ url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo">
+et                <img src="{{ secure_url('assets/img/logo-512.png') }}" alt="Cash Linkify Logo">
                 <span class="logo-text">Cash Linkify</span>
             </a>
             
