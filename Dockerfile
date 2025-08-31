@@ -57,5 +57,9 @@ RUN php artisan storage:link
 # Expose port 80
 EXPOSE 80
 
+# Copy startup script
+COPY docker/startup.sh /usr/local/bin/startup.sh
+RUN chmod +x /usr/local/bin/startup.sh
+
 # Start Apache with Laravel setup
-CMD ["sh", "-c", "php artisan migrate --force && php artisan db:seed --force && php artisan config:cache && php artisan route:cache && php artisan view:cache && php artisan optimize && apache2-foreground"]
+CMD ["/usr/local/bin/startup.sh"]

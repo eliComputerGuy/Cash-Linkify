@@ -13,6 +13,12 @@ class LevelSeeder extends Seeder
      */
     public function run(): void
     {
+        // Check if levels already exist
+        if (Level::count() > 0) {
+            $this->command->info('Levels already exist, skipping seeding.');
+            return;
+        }
+
         $levels = [
             ['name' => 'Level 1', 'entry_fee' => 20000, 'reward_per_video' => 100, 'daily_tasks' => 15, 'max_withdrawal_weekly' => 9500],
             ['name' => 'Level 2', 'entry_fee' => 80000, 'reward_per_video' => 200, 'daily_tasks' => 25, 'max_withdrawal_weekly' => 19500],
