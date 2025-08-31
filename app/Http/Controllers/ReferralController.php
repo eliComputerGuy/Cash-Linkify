@@ -71,6 +71,10 @@ class ReferralController extends Controller
                 $subscriber->save();
             }
 
+            // Update user's registration stage
+            $subscriber->status = 'verified';
+            $subscriber->save();
+
 
             // Approve payment
             $payment->status = 'verified';
