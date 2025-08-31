@@ -133,7 +133,7 @@
                         </div>
                     @endif
                     
-                    <form action="{{ route('investment.complete', $activeInvestment->id) }}" method="POST">
+                    <form action="{{ secure_url('/investment/' . $activeInvestment->id . '/complete') }}" method="POST">
                         @csrf
                         <button type="submit" class="btn btn-success w-100" {{ !$hasBankDetails ? 'disabled' : '' }}>
                             <i class="bi bi-check-circle me-2"></i>

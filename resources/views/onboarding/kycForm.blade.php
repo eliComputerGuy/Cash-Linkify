@@ -29,7 +29,7 @@
                         </div>
                     @endif
 
-                    <form action="{{ route('submit.kyc') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ secure_url('/onboarding/kyc') }}" method="POST" enctype="multipart/form-data">
                         @csrf
 
                         <!-- Country -->

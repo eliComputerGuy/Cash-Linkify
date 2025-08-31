@@ -39,7 +39,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('investment.package.select', $package->id) }}" method="POST">
+                <form action="{{ secure_url('/investment/package/' . $package->id . '/select') }}" method="POST">
                     @csrf
                     
                     <div class="row">

@@ -56,7 +56,7 @@
 <div class="modal fade" id="paymentModal" tabindex="-1" aria-labelledby="paymentModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-dialog-centered">
     <div class="modal-content">
-      <form method="POST" action="{{ route('membership.payment.submit') }}" enctype="multipart/form-data">
+      <form method="POST" action="{{ secure_url('/onboarding/membership-payment') }}" enctype="multipart/form-data">
         @csrf
         <input type="hidden" name="level_id" id="modalLevelId">
 

@@ -68,7 +68,7 @@
                             </ul>
                         </div>
                     @endif
-                    <form action="{{ route('profile.update') }}" method="POST" enctype="multipart/form-data">
+                    <form action="{{ secure_url('/settings/profile') }}" method="POST" enctype="multipart/form-data">
                         @csrf
                         <div class="row">
                             <div class="col-md-6 mb-3">

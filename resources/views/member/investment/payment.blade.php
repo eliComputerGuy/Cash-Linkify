@@ -112,7 +112,7 @@
                     </div>
                 @endif
 
-                <form action="{{ route('investment.payment.submit', $investment->id) }}" method="POST" enctype="multipart/form-data">
+                <form action="{{ secure_url('/investment/' . $investment->id . '/payment/submit') }}" method="POST" enctype="multipart/form-data">
                     @csrf
                     
                     <div class="mb-3">

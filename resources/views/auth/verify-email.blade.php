@@ -25,7 +25,7 @@
                     @if($errors->any())
                         <div class="alert alert-danger">{{ $errors->first() }}</div>
                     @endif
-                    <form method="POST" action="{{ url('/verify-email') }}">
+                    <form method="POST" action="{{ secure_url('/verify-email') }}">
                         @csrf
                         <input type="hidden" name="email" value="{{ $email }}">
                         <div class="mb-3">

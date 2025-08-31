@@ -112,7 +112,7 @@
                                 <a class="dropdown-item theme-red" href="{{ route('logout') }}" onclick="event.preventDefault(); document.getElementById('logout-form').submit();">
                                     <i data-feather="power" class="avatar avatar-18 me-1"></i> Logout
                                 </a>
-                                <form id="logout-form" action="{{ route('logout') }}" method="POST" class="d-none">
+                                <form id="logout-form" action="{{ secure_url('/logout') }}" method="POST" class="d-none">
                                     @csrf
                                 </form>
                             </div>

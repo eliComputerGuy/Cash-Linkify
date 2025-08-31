@@ -72,7 +72,7 @@
                     <div class="row">
                         <div class="col-lg-6">
                             <h6 class="mb-3">Change Password</h6>
-                            <form action="{{ route('profile.password.update') }}" method="POST">
+                            <form action="{{ secure_url('/settings/change-password') }}" method="POST">
                                 @csrf
                                 <div class="mb-3">
                                     <label for="current_password" class="form-label">Current Password</label>
