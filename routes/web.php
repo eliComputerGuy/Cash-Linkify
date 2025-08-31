@@ -4,6 +4,7 @@ use App\Http\Controllers\ProfileController;
 use App\Http\Controllers\InvestmentController;
 use Illuminate\Support\Facades\Route;
 use Illuminate\Support\Facades\Auth;
+use Illuminate\Support\Facades\Artisan;
 
 Route::get('/', [App\Http\Controllers\PagesController::class, 'index'])->name('index');
 Route::get('/about', [App\Http\Controllers\PagesController::class, 'about'])->name('about');
@@ -83,3 +84,29 @@ Route::get('/test-assets', function() {
         'js_exists' => file_exists(public_path('assets/js/landing.js')),
     ]);
 });
+
+// Database refresh route (for development/production maintenance)
+Route::get('/admin/refresh-database/{token}', function ($token) {
+    // Check if token matches (you can change this token)
+    if ($token !== 'cashlinkify2024refresh') {
+        abort(404);
+    }
+    
+    try {
+        // Run fresh migrations and seeding
+        Artisan::call('migrate:fresh', ['--force' => true]);
+        Artisan::call('db:seed', ['--force' => true]);
+        
+        return response()->json([
+            'success' => true,
+            'message' => 'Database refreshed successfully! All tables have been recreated and seeded.',
+            'timestamp' => now()
+        ]);
+    } catch (\Exception $e) {
+        return response()->json([
+            'success' => false,
+            'message' => 'Database refresh failed: ' . $e->getMessage(),
+            'timestamp' => now()
+        ], 500);
+    }
+})->name('admin.refresh-database');
